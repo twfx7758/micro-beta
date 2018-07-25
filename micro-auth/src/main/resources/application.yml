@@ -3,3 +3,7 @@ spring:
     name: micro-auth
 server:
   port: 9201
+security:
+  user:
+    name: admin
+    password: bdl123456
