@@ -29,7 +29,11 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
  * 2、简化模式（implicit）
  * 3、密码模式（resource owner password credentials）
  * 4、客户端模式（client credentials）
- *
+ *ResourceOwnerPasswordTokenGranter ==> password密码模式
+ * AuthorizationCodeTokenGranter ==> authorization_code授权码模式
+ * ClientCredentialsTokenGranter ==> client_credentials客户端模式
+ * ImplicitTokenGranter ==> implicit简化模式
+ * RefreshTokenGranter ==>refresh_token 刷新token专用
  * @author twfx7
  * @since JDK 1.8
  */
