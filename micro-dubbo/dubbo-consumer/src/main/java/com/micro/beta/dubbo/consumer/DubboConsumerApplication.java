@@ -9,7 +9,7 @@ package com.micro.beta.dubbo.consumer;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
-import com.micro.beta.dubbo.consumer.services.interfaces.IGreetingService;
+import com.micro.beta.dubbo.provider.services.interfaces.IGreetingService;
 
 /**
  * 功能：订阅者main函数入口
@@ -20,8 +20,8 @@ import com.micro.beta.dubbo.consumer.services.interfaces.IGreetingService;
 public class DubboConsumerApplication {
     public static void main(String arg[]){
         ReferenceConfig<IGreetingService> referenceConfig = new ReferenceConfig<IGreetingService>();
-        referenceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
-        referenceConfig.setRegistry(new RegistryConfig("multicast://224.5.6.7:1234?unicast=false"));
+        referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
+        referenceConfig.setRegistry(new RegistryConfig("redis://192.168.206.122:6379"));
         referenceConfig.setInterface(IGreetingService.class);
         IGreetingService greetingService = referenceConfig.get();
         System.out.println(greetingService.sayHello("world"));
