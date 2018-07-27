@@ -11,6 +11,7 @@
     <modules>
         <module>micro-auth</module>
         <module>micro-zuul</module>
+        <module>micro-dubbo</module>
     </modules>
 
     <parent>
