@@ -39,20 +39,17 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Autowired
     DataSource dataSource;
 
-    @Bean
-    public TokenStore tokenStore() {
-        return new JdbcTokenStore(dataSource);
-    }
+    @Autowired
+    TokenStore tokenStore;
 
-    @Bean
-    public ClientDetailsService clientDetails() {
-        return new JdbcClientDetailsService(dataSource);
-    }
+    @Autowired
+    ClientDetailsService clientDetails;
+
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
-                .tokenStore(tokenStore())
+                .tokenStore(tokenStore)
                 .authenticationManager(authenticationManager);
 
         //配置TokenServices参数
@@ -67,7 +64,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.withClientDetails(clientDetails());
+        clients.withClientDetails(clientDetails);
     }
 
     @Override
