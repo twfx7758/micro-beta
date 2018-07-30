@@ -1,4 +1,4 @@
-///*
+package com.micro.beta.auth.config;///*
 // * @(#)ResourceServerConfiguration.java      2018/7/27
 // *
 // * 百得利集团拥有完全的版权
