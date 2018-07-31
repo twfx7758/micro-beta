@@ -11,6 +11,8 @@ import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.micro.beta.dubbo.service.interfaces.IGreetingService;
 
+import java.io.IOException;
+
 /**
  * 功能：订阅者main函数入口
  *
@@ -18,12 +20,14 @@ import com.micro.beta.dubbo.service.interfaces.IGreetingService;
  * @since JDK 1.8
  */
 public class DubboConsumerApplication {
-    public static void main(String arg[]){
+    public static void main(String arg[]) throws IOException {
         ReferenceConfig<IGreetingService> referenceConfig = new ReferenceConfig<IGreetingService>();
         referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
         referenceConfig.setRegistry(new RegistryConfig("redis://192.168.206.111:6379"));
         referenceConfig.setInterface(IGreetingService.class);
         IGreetingService greetingService = referenceConfig.get();
         System.out.println(greetingService.sayHello("world"));
+
+        System.in.read();
     }
 }
