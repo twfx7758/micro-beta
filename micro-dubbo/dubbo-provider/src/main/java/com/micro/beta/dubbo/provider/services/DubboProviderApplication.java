@@ -24,7 +24,7 @@ public class DubboProviderApplication {
     public static void main(String args[]) throws IOException {
         ServiceConfig<IGreetingService> serviceConfig = new ServiceConfig<IGreetingService>();
         serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
-        serviceConfig.setRegistry(new RegistryConfig("redis://192.168.206.122:6379"));
+        serviceConfig.setRegistry(new RegistryConfig("redis://192.168.206.111:6379"));
         serviceConfig.setInterface(IGreetingService.class);
         serviceConfig.setRef(new GreetingServiceImpl());
         serviceConfig.export();

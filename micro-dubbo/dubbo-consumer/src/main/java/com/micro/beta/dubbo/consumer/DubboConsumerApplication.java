@@ -20,8 +20,8 @@ import com.micro.beta.dubbo.provider.services.interfaces.IGreetingService;
 public class DubboConsumerApplication {
     public static void main(String arg[]){
         ReferenceConfig<IGreetingService> referenceConfig = new ReferenceConfig<IGreetingService>();
-        referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
-        referenceConfig.setRegistry(new RegistryConfig("redis://192.168.206.122:6379"));
+        referenceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
+        referenceConfig.setRegistry(new RegistryConfig("redis://192.168.206.111:6379"));
         referenceConfig.setInterface(IGreetingService.class);
         IGreetingService greetingService = referenceConfig.get();
         System.out.println(greetingService.sayHello("world"));
