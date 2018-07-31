@@ -6,7 +6,7 @@
  */
 package com.micro.beta.dubbo.provider.services.impl;
 
-import com.micro.beta.dubbo.provider.services.interfaces.IGreetingService;
+import com.micro.beta.dubbo.service.interfaces.IGreetingService;
 
 /**
  * 功能：

@@ -36,5 +36,11 @@
             <artifactId>jetty-webapp</artifactId>
             <version>8.1.11.v20130520</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.micro.beta</groupId>
+            <artifactId>dubbo-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

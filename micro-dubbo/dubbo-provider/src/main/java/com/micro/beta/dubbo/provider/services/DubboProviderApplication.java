@@ -10,7 +10,7 @@ import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.ServiceConfig;
 import com.micro.beta.dubbo.provider.services.impl.GreetingServiceImpl;
-import com.micro.beta.dubbo.provider.services.interfaces.IGreetingService;
+import com.micro.beta.dubbo.service.interfaces.IGreetingService;
 
 import java.io.IOException;
 
