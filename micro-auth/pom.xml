@@ -39,10 +39,11 @@
         </dependency>
 
         <!-- 将token存储在redis中 -->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!-- 将token存储在mysql中 -->
         <dependency>
             <groupId>mysql</groupId>
