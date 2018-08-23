@@ -13,6 +13,7 @@
         <module>micro-zuul</module>
         <module>micro-dubbo</module>
         <module>micro-edas</module>
+        <module>micro-sleuth</module>
     </modules>
 
     <parent>
