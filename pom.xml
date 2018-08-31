@@ -14,6 +14,7 @@
         <module>micro-dubbo</module>
         <module>micro-edas</module>
         <module>micro-sleuth</module>
+        <module>micro-etcd</module>
     </modules>
 
     <parent>
