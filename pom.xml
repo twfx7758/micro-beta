@@ -15,6 +15,7 @@
         <module>micro-edas</module>
         <module>micro-sleuth</module>
         <module>micro-etcd</module>
+        <module>micro-jvm</module>
     </modules>
 
     <parent>
