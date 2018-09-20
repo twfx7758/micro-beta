@@ -16,6 +16,7 @@
         <module>micro-sleuth</module>
         <module>micro-etcd</module>
         <module>micro-jvm</module>
+        <module>micro-demo</module>
     </modules>
 
     <parent>
