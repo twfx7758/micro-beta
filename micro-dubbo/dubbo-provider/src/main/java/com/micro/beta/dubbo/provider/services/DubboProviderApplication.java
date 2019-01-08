@@ -21,7 +21,6 @@ import java.io.IOException;
  */
 @SpringBootApplication
 @EnableDubboConfiguration
-@ComponentScan("com.micro.beta.dubbo.provider.services")
 public class DubboProviderApplication {
     public static void main(String args[]) throws IOException {
         SpringApplication.run(DubboProviderApplication.class, args);
