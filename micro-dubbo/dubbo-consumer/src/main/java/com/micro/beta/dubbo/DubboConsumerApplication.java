@@ -23,13 +23,7 @@ import java.io.IOException;
 @SpringBootApplication
 @EnableDubboConfiguration
 public class DubboConsumerApplication {
-
-//    @Autowired
-//    static GreetingConsumer greetingConsumer;
-
     public static void main(String arg[]) throws IOException {
         SpringApplication.run(DubboConsumerApplication.class, arg);
-
-        //greetingConsumer.iGreetingService.sayHello("quwenbin, hello world!");
     }
 }
