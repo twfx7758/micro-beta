@@ -4,6 +4,8 @@ spring:
   dubbo:
     server: true
     registry: N/A
+server:
+  port: 8089
 #  redis:
 #      host: 127.0.0.1
 #      port: 6379

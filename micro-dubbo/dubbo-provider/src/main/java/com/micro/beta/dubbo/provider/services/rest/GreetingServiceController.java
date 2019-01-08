@@ -8,11 +8,10 @@ package com.micro.beta.dubbo.provider.services.rest;
 
 import com.micro.beta.dubbo.service.interfaces.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 功能：api接口
@@ -20,15 +19,14 @@ import javax.ws.rs.QueryParam;
  * @author twfx7
  * @since JDK 1.8
  */
-@Service
-@Path("/api/v1")
+@RestController
+@RequestMapping("/api/v1")
 public class GreetingServiceController {
     @Autowired
     private IGreetingService iGreetingService;
 
-    @GET
-    @Path("/say")
-    public String sayHello(@QueryParam("name") String name){
+    @RequestMapping(value = "/say", method = RequestMethod.GET)
+    public String sayHello(@RequestParam String name) {
         return iGreetingService.sayHello(name);
     }
 }

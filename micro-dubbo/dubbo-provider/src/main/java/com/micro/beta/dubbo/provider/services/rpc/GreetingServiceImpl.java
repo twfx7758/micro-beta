@@ -17,10 +17,10 @@ import org.springframework.stereotype.Component;
  * @since JDK 1.8
  */
 @Service(interfaceClass = IGreetingService.class)
-@Component
+@org.springframework.stereotype.Service
 public class GreetingServiceImpl implements IGreetingService {
     @Override
     public String sayHello(String name) {
-        return "Hello" + name;
+        return "hello " + name;
     }
 }
