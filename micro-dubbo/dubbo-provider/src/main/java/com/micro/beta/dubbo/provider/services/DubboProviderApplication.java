@@ -6,11 +6,9 @@
  */
 package com.micro.beta.dubbo.provider.services;
 
-import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.RegistryConfig;
-import com.alibaba.dubbo.config.ServiceConfig;
-import com.micro.beta.dubbo.provider.services.impl.GreetingServiceImpl;
-import com.micro.beta.dubbo.service.interfaces.IGreetingService;
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 
@@ -20,14 +18,10 @@ import java.io.IOException;
  * @author twfx7
  * @since JDK 1.8
  */
+@SpringBootApplication
+@EnableDubboConfiguration
 public class DubboProviderApplication {
     public static void main(String args[]) throws IOException {
-        ServiceConfig<IGreetingService> serviceConfig = new ServiceConfig<IGreetingService>();
-        serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
-        serviceConfig.setRegistry(new RegistryConfig("redis://192.168.206.111:6379"));
-        serviceConfig.setInterface(IGreetingService.class);
-        serviceConfig.setRef(new GreetingServiceImpl());
-        serviceConfig.export();
-        System.in.read();
+        SpringApplication.run(DubboProviderApplication.class, args);
     }
 }

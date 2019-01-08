@@ -18,6 +18,7 @@
         <module>micro-jvm</module>
         <module>micro-demo</module>
         <module>sap-cloud</module>
+        <module>micro-activiti</module>
     </modules>
 
     <parent>
