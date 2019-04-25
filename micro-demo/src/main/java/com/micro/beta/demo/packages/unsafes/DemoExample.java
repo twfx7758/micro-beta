@@ -6,6 +6,8 @@
  */
 package com.micro.beta.demo.packages.unsafes;
 
+import sun.misc.Unsafe;
+
 /**
  * 功能：
  *
@@ -13,5 +15,8 @@ package com.micro.beta.demo.packages.unsafes;
  * @since JDK 1.8
  */
 public class DemoExample {
+    public void testUnsafe() {
+        Unsafe unsafe = Unsafe.getUnsafe();
 
+    }
 }
