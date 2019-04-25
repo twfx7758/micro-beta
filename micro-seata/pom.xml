@@ -16,6 +16,7 @@
         <module>micro-order</module>
         <module>seata-account</module>
         <module>seata-order</module>
+        <module>seata-business</module>
     </modules>
     <properties>
         <seata.version>0.5.0</seata.version>
