@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>seata-storage</module>
-        <module>micro-order</module>
         <module>seata-account</module>
         <module>seata-order</module>
         <module>seata-business</module>
