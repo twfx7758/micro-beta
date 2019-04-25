@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>micro-seata</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>seata-storage</module>
+        <module>micro-order</module>
+        <module>seata-account</module>
+    </modules>
     <properties>
         <seata.version>0.5.0</seata.version>
     </properties>
