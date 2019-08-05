@@ -17,7 +17,6 @@
         <module>micro-etcd</module>
         <module>micro-jvm</module>
         <module>micro-demo</module>
-        <module>sap-cloud</module>
         <module>micro-activiti</module>
         <module>micro-seata</module>
     </modules>

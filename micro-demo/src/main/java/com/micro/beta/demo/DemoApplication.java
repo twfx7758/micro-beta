@@ -6,8 +6,10 @@
  */
 package com.micro.beta.demo;
 
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
+import com.micro.beta.demo.services.MicroBean;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.io.IOException;
 
 /**
  * 功能：
@@ -17,4 +19,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class DemoApplication {
 
+    public static void main(String[] args) throws IOException {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(DemoApplication.class);
+        MicroBean microBean = applicationContext.getBean(MicroBean.class);
+        System.out.println(microBean.getState());
+
+        //ArrayList<Integer> list = new ArrayList(256);
+        //list.parallelStream().filter(o -> o > 30).count();
+    }
 }
