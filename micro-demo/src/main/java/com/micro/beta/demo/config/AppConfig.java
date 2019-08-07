@@ -9,7 +9,6 @@ package com.micro.beta.demo.config;
 import com.micro.beta.demo.annotation.EnableSpringMicro;
 import com.micro.beta.demo.services.MicroBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
