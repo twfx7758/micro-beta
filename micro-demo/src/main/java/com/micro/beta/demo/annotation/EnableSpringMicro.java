@@ -22,4 +22,5 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Import(SpringMicroSelector.class)
 public @interface EnableSpringMicro {
+    String value() default "";
 }

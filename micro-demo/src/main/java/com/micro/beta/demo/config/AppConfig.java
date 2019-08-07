@@ -1,5 +1,5 @@
 /*
- * @(#)AppConfig.java      2019/8/5
+ * @(#)AppConfig.java      2019/8/7
  *
  * 百得利集团拥有完全的版权
  * 使用者必须经过许可
@@ -13,13 +13,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 功能：
+ * 功能：配置
  *
  * @author twfx7
  * @since JDK 1.8
  */
 @Configuration
-@ComponentScan
 @EnableSpringMicro
 public class AppConfig {
 
@@ -29,5 +28,4 @@ public class AppConfig {
         microBean.setState(1);
         return microBean;
     }
-
 }
