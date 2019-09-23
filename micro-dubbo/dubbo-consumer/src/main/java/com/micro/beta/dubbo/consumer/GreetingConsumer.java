@@ -6,8 +6,8 @@
  */
 package com.micro.beta.dubbo.consumer;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.micro.beta.dubbo.service.interfaces.IGreetingService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Component;
 
 /**

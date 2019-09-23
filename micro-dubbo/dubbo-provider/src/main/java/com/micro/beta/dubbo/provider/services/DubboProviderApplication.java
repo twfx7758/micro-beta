@@ -6,10 +6,9 @@
  */
 package com.micro.beta.dubbo.provider.services;
 
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubboConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 import java.io.IOException;
 
@@ -20,7 +19,7 @@ import java.io.IOException;
  * @since JDK 1.8
  */
 @SpringBootApplication
-@EnableDubboConfiguration
+@EnableDubboConfig
 public class DubboProviderApplication {
     public static void main(String args[]) throws IOException {
         SpringApplication.run(DubboProviderApplication.class, args);

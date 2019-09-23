@@ -6,9 +6,7 @@
  */
 package com.micro.beta.dubbo;
 
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import com.micro.beta.dubbo.consumer.GreetingConsumer;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubboConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -21,7 +19,7 @@ import java.io.IOException;
  * @since JDK 1.8
  */
 @SpringBootApplication
-@EnableDubboConfiguration
+@EnableDubboConfig
 public class DubboConsumerApplication {
     public static void main(String arg[]) throws IOException {
         SpringApplication.run(DubboConsumerApplication.class, arg);
